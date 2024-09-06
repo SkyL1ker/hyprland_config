@@ -1,0 +1,117 @@
+* {
+    border: none;
+    font-family: Font Awesome, Roboto, Arial, sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+window {
+	/*font-weight: bold;*/
+}
+
+#window {
+	padding-right: 8pt;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+}
+/*-----module groups----*/
+.modules-left {
+    margin: 2px 50pt 0 5px;
+	background-color: rgba(0,119,179,0.6);
+}
+.modules-right {
+	background-color: rgba(0,43,51,0.85);
+    margin: 2px 10px 0 0;
+}
+.modules-center {
+	background-color: rgba(0,43,51,0.85);
+    margin: 2px 0 0 0;
+}
+/*-----modules indv----*/
+#workspaces button {
+    padding: 1px 5px;
+    background-color: transparent;
+}
+#workspaces button:hover {
+	box-shadow: none; /* Remove predefined box-shadow */
+  	text-shadow: none; /* Remove predefined text-shadow */
+  	background: none; /* Remove predefined background color (white) */
+  	transition: none; /* Disable predefined animations */
+	background: rgba(0, 56, 83, 0.6);
+  	color: #313244;
+  	animation: gradient_f 20s ease-in infinite;
+  	transition: all 0.3s cubic-bezier(.55,0,.67,1.25);
+}
+
+#workspaces button.active {
+	/* background-color: rgba(0,43,51,0.85); */
+	background-color: rgba(0,119,179,0.6);
+    border-radius: 100px;
+}
+
+#tray menu {
+	background-color: black;
+}
+
+#tray menu-item:hover {
+    color: red;
+    background-color: green;
+}
+
+/* Not in use right now */
+#mode,
+#custom-power,
+#custom-menu,
+#temperature,
+#memory,
+
+#clock,
+#battery,
+#cpu,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#idle_inhibitor {
+    padding: 0 10px;
+}
+#mode {
+    color: #cc3436;
+    font-weight: bold;
+}
+#custom-power {
+    background-color: rgba(0,119,179,0.6);
+    border-radius: 100px;
+    margin: 5px 5px;
+    padding: 1px 1px 1px 6px;
+}
+/*-----Indicators----*/
+#idle_inhibitor.activated {
+    color: #2dcc36;
+}
+#pulseaudio.muted {
+    color: #cc3436;
+}
+#battery.charging {
+    color: #2dcc36;
+}
+#battery.warning:not(.charging) {
+	color: #e6e600;
+}
+#battery.critical:not(.charging) {
+    color: #cc3436;
+}
+#temperature.critical {
+    color: #cc3436;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
